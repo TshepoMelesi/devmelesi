@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+:root{
+  --dark: #1a063d;
+  --light: white;
+
+  --pad: 2rem;
+  --d-size : 3rem;
+
+  --header-h: 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* | | UTILITIES */
+.p-02{
+  padding: 0 2rem;
+}
+.w-100{
+  width: 100%;
+}
+.h-100{
+  height: 100%;
+}
+.flex{
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex-d-c{
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.j-b{
+  justify-content: space-between;
+}
+.j-c{
+  justify-content: center;
+}
+
+.a-c{
+  align-items: center;
+}
+
+.g-1{
+  gap: 1rem;
+}
+
+.g-05{
+  gap: 0.5rem;
+}
+
+.f-g-1{
+  flex-grow: 1;
+}
+
+body{
+  width: 100%;
+  background-color: var(--dark);
+
+  overflow: hidden;
+  position: relative;
+}
+
+.section-projects, .section-resume, .section-quotation{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* | | APP DESIGNS */
+.App{
+  overflow: hidden;
+}
+
+/* | | HEADER DESIGNS */
+.main-header{
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height:var(--header-h);
+  background-color: var(--dark);
+  border-bottom: 2px solid var(--light);
+  z-index: 10;
+}
+.main-header nav {
+  color: var(--light);
+}
+.list-navlinks li a{
+  font-size: 16px;
+  color: white;
+}
+.list-navlinks li a:hover, .list-navlinks li a:focus, 
+.list-navlinks li a:active{
+  color: orange;
+}
+
+.section-hero{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-body{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* | | FLOATING NAV DESIGNS */
+.floating-nav{
+  z-index: 111;
+  position: fixed;
+  top: 40%;
+  left: 2rem;
+
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+}
+.destiny{
+  width: var(--d-size);
+  height: var(--d-size);
+
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  border-radius: 2rem;
+
+  background-color: var(--light);
+}
+
+.temp{
+  font-size: 4rem;
+
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* | | BODY DESIGNS */
+
+
+/* | | FOOTER DESIGNS */
+.main-footer{
+  background-color: yellow;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
